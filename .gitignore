@@ -30,6 +30,8 @@ linkedin_Profile.pdf
 *.jpeg
 *.png
 !cover_letters/OpenFonts/fonts/**
+# Project documentation images are not personal data
+!docs/*.png
 
 # OS files
 .DS_Store

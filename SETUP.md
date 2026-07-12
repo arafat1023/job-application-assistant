@@ -51,7 +51,7 @@ cd job-application-assistant
 Install dev types for the TypeScript tools:
 
 ```bash
-for tool in hn-hiring-search freehire-search linkedin-search; do
+for tool in hn-hiring-search freehire-search linkedin-search ats-search; do
     echo "=== installing $tool ==="
     (cd .agents/skills/$tool/cli && bun install)
 done
@@ -76,6 +76,7 @@ claude
 - **hn-hiring-search** — the monthly "Ask HN: Who is hiring?" threads on Hacker News
 - **freehire-search** — the freehire.dev remote-job aggregator
 - **linkedin-search** — LinkedIn job listings (personal use only; see its SKILL.md for the ToS note)
+- **ats-search** — the open roles of named companies on Greenhouse, Lever, and Ashby (company watchlists, posting lookups)
 
 Add more boards with `/add-portal` — it scaffolds the CLI, test-runs a live query, and registers the skill.
 

@@ -126,6 +126,7 @@ jobs:
       fail-fast: false
       matrix:
         tool:
+          - ats-search
           - freehire-search
           - hn-hiring-search
           - linkedin-search

@@ -8,6 +8,7 @@ Primary (bundled CLI skills — prefer these over Google queries where they cove
 - **Hacker News "Who is hiring?"** — monthly hiring threads; use the `hn-hiring-search` skill
 - **freehire.dev** — remote-job aggregator; use the `freehire-search` skill
 - **linkedin.com/jobs** — LinkedIn job listings; use the `linkedin-search` skill (personal use only, see its SKILL.md)
+- **Company watchlist (Greenhouse / Lever / Ashby boards)** — use the `ats-search` skill to sweep named target companies' open roles
 
 Secondary (via Google `site:` queries):
 - **[YOUR_LOCAL_JOB_BOARD]** — your country's main job board (add a CLI skill for it with `/add-portal`)

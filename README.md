@@ -21,6 +21,7 @@ You describe yourself once (`/setup` populates `CLAUDE.md` with your profile), t
 - **hn-hiring-search** — the monthly "Ask HN: Who is hiring?" threads on Hacker News
 - **freehire-search** — the freehire.dev remote-job aggregator
 - **linkedin-search** — LinkedIn job listings (personal use only; see its SKILL.md for the ToS note)
+- **ats-search** — the open roles of named companies on Greenhouse, Lever, and Ashby, via their public job-board APIs (company watchlists, posting lookups)
 
 Each is a zero-runtime-dependency TypeScript CLI run with [Bun](https://bun.sh). Need another board? `/add-portal` generates the skill, test-runs a live query, and registers it.
 
@@ -38,7 +39,7 @@ git clone https://github.com/arafat1023/job-application-assistant.git
 cd job-application-assistant
 
 # install dev types for the job-board CLIs
-for tool in hn-hiring-search freehire-search linkedin-search; do
+for tool in hn-hiring-search freehire-search linkedin-search ats-search; do
   (cd .agents/skills/$tool/cli && bun install)
 done
 

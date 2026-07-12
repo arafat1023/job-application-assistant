@@ -29,6 +29,8 @@ Each is a zero-runtime-dependency TypeScript CLI run with [Bun](https://bun.sh).
 
 Every tool emits the same JSON result shape, and `tools/jobs_report.py` turns it into a self-contained HTML report — client-side text filter, column sorting, remote-only toggle, dark-mode aware. No server, no dependencies; open the file directly:
 
+![HTML job report: filterable, sortable table of search results](docs/jobs-report.png)
+
 ```bash
 bun run .agents/skills/ats-search/cli/src/cli.ts search -c stripe,linear -q engineer \
   | python3 tools/jobs_report.py --title "Watchlist sweep" -o jobs_report.html

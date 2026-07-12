@@ -25,7 +25,7 @@ name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -127,10 +127,7 @@ jobs:
       matrix:
         tool:
           - freehire-search
-          - jobbank-search
-          - jobdanmark-search
-          - jobindex-search
-          - jobnet-search
+          - hn-hiring-search
           - linkedin-search
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4

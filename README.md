@@ -25,6 +25,18 @@ You describe yourself once (`/setup` populates `CLAUDE.md` with your profile), t
 
 Each is a zero-runtime-dependency TypeScript CLI run with [Bun](https://bun.sh). Need another board? `/add-portal` generates the skill, test-runs a live query, and registers it.
 
+## View results in the browser
+
+Every tool emits the same JSON result shape, and `tools/jobs_report.py` turns it into a self-contained HTML report — client-side text filter, column sorting, remote-only toggle, dark-mode aware. No server, no dependencies; open the file directly:
+
+```bash
+bun run .agents/skills/ats-search/cli/src/cli.ts search -c stripe,linear -q engineer \
+  | python3 tools/jobs_report.py --title "Watchlist sweep" -o jobs_report.html
+open jobs_report.html   # or xdg-open / start
+```
+
+It also merges multiple result files (`python3 tools/jobs_report.py hn.json ats.json -o report.html`), so one page can aggregate a whole scrape session across boards.
+
 ## Requirements
 
 - [Claude Code](https://claude.com/claude-code) (the whole workflow runs inside it)

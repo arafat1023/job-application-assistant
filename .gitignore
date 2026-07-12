@@ -72,3 +72,6 @@ upskill/*.md
 .agents/**/node_modules/
 .agents/**/*.log
 .agents/usage/
+
+# Generated job-report pages (tools/jobs_report.py output)
+jobs_report*.html

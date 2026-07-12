@@ -1,0 +1,20 @@
+{
+  "name": "hn-hiring-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching the monthly 'Ask HN: Who is hiring?' thread via HN's public Algolia API — no authentication, zero runtime dependencies. Filters for worldwide-remote postings that hire across borders.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "hn-hiring-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}
